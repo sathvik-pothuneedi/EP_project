@@ -1,0 +1,61 @@
+<html xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+  <title>Admin-Faculty</title>
+  <style>
+ .employeeTable {   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.employeeTableHeader {
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+   cell-padding:5px;
+}
+
+.employeeTableOddRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFFF;
+   cell-padding:5px;	
+}
+
+.employeeTableEvenRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+   cellpadding:5px;
+}
+  .safe1{
+  padding: 50px;
+
+border:4px solid black;
+margin-top:150px;
+margin-left:480px;
+width:450px;
+height:300px;
+background-image: url("Faculty.jpg");
+background-size: 100% 100%;
+  }
+
+</style>
+</head>
+<body background="Fac.jpg">
+  
+    <div class="safe1">
+    <h3>Faculty Details</h3>
+    <h:form>
+    <div class="table">
+     <p>Faculty ID/username : <h:outputLabel value="#{faculty.id}" />  <h:commandButton action="#{faculty.find2()}" value="Get Details"/> </p>
+    <p>Faculty Password : <h:outputText value="#{faculty.password}" /></p>
+    <p>Faculty Name : <h:outputText value="#{faculty.name}" /> </p>
+    <p>Faculty Designation : <h:outputText value="#{faculty.dsg}"  /></p>
+    <p>Faculty Achievments : <h:outputText value="#{faculty.ach}" /> </p>
+    <p>Enrolled Course : <h:outputText value="#{faculty.course}" /></p>
+   
+    </div>
+</h:form>
+ </div>
+</body>
+</html>
